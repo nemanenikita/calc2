@@ -12,7 +12,7 @@ def test_calculator_add():
     calc = Calculator()
     #Act by calling the method to be tested
     calc.add_number(4)
-    #Assert that the results are correct
+    #Assert that the results are corect
     assert calc.result == 4
 
 def test_calculator_get_result():
