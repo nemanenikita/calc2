@@ -15,6 +15,9 @@ def test_calculator_add():
     #Assert that the results are correct
     assert calc.result == 4
 
+# def test_calculator_add():
+#     assert Calculator.add_number(1,2)==3
+
 def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
     calc = Calculator()
@@ -25,6 +28,9 @@ def test_calculator_subtract():
     calc = Calculator()
     calc.subtract_number(1)
     assert calc.get_result() == -1
+
+# def test_calculator_subtract():
+#     assert Calculator.subtract_number(2,1)==1
 def test_calculator_multiply():
     """ tests multiplication of two numbers"""
     calc = Calculator()
