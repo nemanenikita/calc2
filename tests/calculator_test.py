@@ -1,4 +1,6 @@
 """Testing the Calculator"""
+import pytest
+
 from calculator.main import Calculator
 
 def test_calculator_result():
@@ -15,9 +17,6 @@ def test_calculator_add():
     #Assert that the results are correct
     assert calc.result == 4
 
-# def test_calculator_add():
-#     assert Calculator.add_number(1,2)==3
-
 def test_calculator_get_result():
     """Testing the Get result method of the calculator"""
     calc = Calculator()
@@ -32,12 +31,13 @@ def test_calculator_subtract():
 # def test_calculator_subtract():
 #     assert Calculator.subtract_number(2,1)==1
 def test_calculator_multiply():
-    """ tests multiplication of two numbers"""
-    calc = Calculator()
-    result  = calc.multiply_numbers(1,2)
-    assert result == 2
+    """ Testing multiplication of two numbers"""
+    assert Calculator.multiply_numbers(1,2) == 2
 def test_calculator_divide():
     """ tests division of two numbers"""
-    calc = Calculator()
-    result  = calc.divide_numbers(4,2)
-    assert result == 2
+    assert Calculator.divide_numbers(2, 2)==1
+
+def test_calculator_division_exception():
+    """ Testing division exception for division by zero"""
+    with pytest.raises(ZeroDivisionError):
+        Calculator.divide_numbers(1,0)
