@@ -5,7 +5,7 @@ value A and value B from the calculation class"""
 #It looks like a folder and file path but it is
 # sort of a virtual representation of how the program is organized
 
-from calc.calculation import Calculation
+from calc.calculations.calculation import Calculation
 
 #This is how you extend the division class with the Calculation
 class Division(Calculation):
