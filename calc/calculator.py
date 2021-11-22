@@ -1,5 +1,6 @@
 """ This is the increment function"""
 from calc.calculations.addition import Addition
+from calc.calculations.division import Division
 from calc.calculations.multiplication import Multiplication
 from calc.calculations.subtraction import Subtraction
 
@@ -29,4 +30,10 @@ class Calculator:
     def multiply_numbers(values: tuple):
         """ adds list of numbers"""
         Calculations.add_calculation_to_history(Multiplication.create(values))
+        return True
+
+    @staticmethod
+    def divide_numbers(values: tuple):
+        """ adds list of numbers"""
+        Calculations.add_calculation_to_history(Division.create(values))
         return True

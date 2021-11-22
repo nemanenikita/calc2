@@ -12,9 +12,8 @@ def test_calculation_addition():
     """testing that our calculator has a static method for addition"""
     #Arrange
     path = os.path.join(BASE_DIR,"addition1.xlsx")
-    df = pd.read_excel(path, names=["value1", "value2", "result"])
-    for index, row in df.iterrows():
+    data_frame = pd.read_excel(path, names=["value1", "value2", "result"])
+    for index, row in data_frame.iterrows():
         values = (row.value1, row.value2)
         addition= Addition.create(values)
-        assert addition.get_result() == df["result"][index]
-
+        assert addition.get_result() == data_frame["result"][index]

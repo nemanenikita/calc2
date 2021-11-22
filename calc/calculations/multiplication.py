@@ -1,14 +1,14 @@
-"""Subtraction Class"""
+"""Multiplication Class"""
 
 from calc.calculations.calculation import Calculation
 
 class Multiplication(Calculation):
-    """subtraction calculation object"""
+    """multiplication calculation object"""
     def get_result(self):
-        """get the subtraction results"""
+        """get the multiplication results"""
         for index, value  in enumerate(self.values):
             if index == 0:
-                difference_of_values = value
+                multiplication_values = value
             else:
-                difference_of_values = difference_of_values * value
-        return difference_of_values
+                multiplication_values = multiplication_values * value
+        return multiplication_values

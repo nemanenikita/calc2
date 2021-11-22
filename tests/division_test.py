@@ -2,8 +2,9 @@
 import os
 
 import pandas as pd
+import pytest
 
-from calc.calculations.multiplication import Multiplication
+from calc.calculations.division import Division
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__)) # Get Current Working Directory
 
@@ -11,9 +12,15 @@ BASE_DIR = os.path.dirname(os.path.realpath(__file__)) # Get Current Working Dir
 def test_calculation_addition():
     """testing that our calculator has a static method for addition"""
     #Arrange
-    path = os.path.join(BASE_DIR,"multiplication1.xlsx")
+    path = os.path.join(BASE_DIR,"division1.xlsx")
     data_frame = pd.read_excel(path, names=["value1", "value2", "result"])
     for index, row in data_frame.iterrows():
         values = (row.value1, row.value2)
-        multiplication= Multiplication.create(values)
-        assert multiplication.get_result() == data_frame["result"][index]
+        division= Division.create(values)
+
+        try:
+            # Assert
+            assert division.get_result() == data_frame['result'][index].round(decimals=5)
+        except ZeroDivisionError:
+            with pytest.raises(ZeroDivisionError):
+                assert division.get_result() is True
