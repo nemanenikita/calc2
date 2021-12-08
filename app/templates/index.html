@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<!--    <h1>Project 3</h1>-->
+<div class="hero-image">
+    <img src="{{ url_for('static', filename='images/back2.png') }}" alt="Background Image" class="center" ></div>
+<div class="row" >
+    <div class="leftcolumn">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/back2.png') }}" alt="Background Image" class="center" >
+        </div>
+
+    </div>
+    <div class="rightcolumn">
+            <div class="card">
+                <h1 style="color: #d55d11">For Project 3 click on Calculator</h1>
+
+            </div>
+    </div>
+
+</div>
+</div>
+{% endblock %}

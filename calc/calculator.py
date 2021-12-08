@@ -15,25 +15,25 @@ class Calculator:
         return Calculations.get_last_calculation_result()
 
     @staticmethod
-    def add_numbers(values: tuple):
+    def addition(values: tuple):
         """ adds list of numbers"""
         Calculations.add_calculation_to_history(Addition.create(values))
         return True
 
     @staticmethod
-    def subtract_numbers(values: tuple):
+    def subtraction(values: tuple):
         """ adds list of numbers"""
         Calculations.add_calculation_to_history(Subtraction.create(values))
         return True
 
     @staticmethod
-    def multiply_numbers(values: tuple):
+    def multiplication(values: tuple):
         """ adds list of numbers"""
         Calculations.add_calculation_to_history(Multiplication.create(values))
         return True
 
     @staticmethod
-    def divide_numbers(values: tuple):
+    def division(values: tuple):
         """ adds list of numbers"""
         Calculations.add_calculation_to_history(Division.create(values))
         return True
