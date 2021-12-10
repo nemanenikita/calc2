@@ -7,23 +7,32 @@
     </style>
 {% endblock %}
 {% block content %}
-<!--    <h1>Project 3</h1>-->
-<div class="hero-image">
-    <img src="{{ url_for('static', filename='images/back2.png') }}" alt="Background Image" class="center" ></div>
-<div class="row" >
+
+<img src="{{url_for('static',filename='images/background.png')}}" alt="Hero Image" class="hero-image">
+
+
+<div class="row" style="padding-top: 400px">
     <div class="leftcolumn">
         <div class="card">
-            <img src="{{ url_for('static', filename='images/back2.png') }}" alt="Background Image" class="center" >
+            <img src="{{url_for('static', filename='images/back2.png')}}" alt="Background Image" class="center" >
         </div>
-
     </div>
     <div class="rightcolumn">
             <div class="card">
-                <h1 style="color: #d55d11">For Project 3 click on Calculator</h1>
+                <h1 style="color: #d55d11">For Project 2 Click on Python Calculator Button!</h1>
+                <a class="nav-link" href="/calculator" style="background-color:#d55d11">Python Calculator</a>
+
+                <a class="nav-link" href="/page1"  style="background-color:#3b5998">Introduction to OOP</a>
+
+                <a href="/page2" class="nav-link" style="background-color:#3b5998">OOP Definitions</a>
+
+                <a href="/page3" class="nav-link" style="background-color:#3b5998">AAA Testing</a>
+
+                <a href="/page4" class="nav-link" style="background-color:#3b5998">OOP Principles</a>
+
+                <a href="/page5" class="nav-link" style="background-color:#3b5998">Separation of Concerns</a>
 
             </div>
     </div>
-
-</div>
 </div>
 {% endblock %}

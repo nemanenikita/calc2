@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="column">
+        <div class="crd">
+            <h3>Factory Method</h3>
+            <p>Factory Method is a Creational Design Pattern that allows an interface or a class to create an object,
+                but lets subclasses decide which class or object to instantiate.</p>
+            <p>Using the Factory method, we have the best ways to create an object. Here, objects are created without
+                exposing the logic to the client, and for creating the new type of object, the client uses the same
+                common interface.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="crd">
+            <h3>Instantiation</h3>
+            <p>Instantiating a class is creating a copy of the class which inherits all class variables and methods.
+                Instantiating a class in Python is simple. To instantiate a class, we simply call the class as if it
+                were a function, passing the arguments that the __init__ method defines. The return value will be the
+                newly created object.</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="crd">
+            <h3>Object</h3>
+            <p>Object-oriented programming (OOP) is a method of structuring a program by bundling related properties and
+                behaviors into individual objects.</p>
+            <p>Objects are like the components of a system. Think of a program as a factory assembly line
+                of sorts. At each step of the assembly line a system component processes some material, ultimately
+                transforming raw material into a finished product.
+                An object contains data, like the raw or preprocessed materials at each step on an assembly line, and
+                behavior, like the action each assembly line component performs.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Class</h3>
+            <p>Classes provide a means of bundling data and functionality together.</p>
+            <p>Creating a new class creates a new type of object, allowing new instances of that type to be made. Each
+                class instance can have attributes attached to it for maintaining its state. Class instances can also
+                have methods (defined by its class) for modifying its state.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Namespace</h3>
+            <p>A namespace is a system that has a unique name for each and every object in Python.</p>
+            <p>An object might be a variable or a method. Python itself maintains a namespace in the form of a Python
+                dictionary.</p>
+            <p>Let’s go through an example, a directory-file system structure in computers. Needless to say, that one
+                can have multiple directories having a file with the same name inside every directory. But one can get
+                directed to the file, one wishes, just by specifying the absolute path to the file. </p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Constructor</h3>
+            <p>Constructors are generally used for instantiating an object. The task of constructors is to initialize(assign values) to the data members of the class when an object of the class is created.</p>
+            <p>In Python the __init__() method is called the constructor and is always called when an object is created.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Fixtures</h3>
+            <p>Fixtures define the steps and data that constitute the arrange phase of a test (see Anatomy of a test).</p>
+            <p>In pytest, they are functions you define that serve this purpose. They can also be used to define a test's act phase; this is a powerful technique for designing more complex tests.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Type Hint</h3>
+            <p>Type hinting is a formal solution to statically indicate the type of a value within your Python code.</p>
+            <p>It was specified in PEP 484 and introduced in Python 3.5.</p>
+            <p> The goal is to provide an easier way to perform a static analysis, potential runtime type checking, and code generation utilizing type information. It is important to note that Python doesn't perform any kind of type checking at runtime.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Type Cast</h3>
+            <p>Type Casting is the method to convert the variable data type into a certain data type in order to the operation required to be performed by users.</p>
+            <p>Casting in python is therefore done using constructor functions: int() - constructs an integer number from an integer literal, a float literal (by removing all decimals), or a string literal (providing the string represents a whole number)</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Unit Test</h3>
+            <p>Unit tests are a special kind of automated test that focuses on testing the least amount of code possible in any one test. Each test tests a single unit of the total amount of available code.</p>
+            <p>The Python library for this is called, unsurprisingly: unittest. It provides several tools for creating and running unit tests, the most important being the TestCase class. This class provides a set of methods that allow us to compare values, set up tests, and clean up after running them.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Static</h3>
+            <p>A static method is also a method that is bound to the class and not the object of the class. A static method can’t access or modify the class state. It is present in a class because it makes sense for the method to be present in class.</p>
+            <p>we use @staticmethod decorator to create a static method in python.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Class Method</h3>
+            <p>The classmethod() is an inbuilt function in Python, which returns a class method for a given function</p>
+            <p>classmethod() methods are bound to a class rather than an object. Class methods can be called by both class and object. These methods can be called with a class or with an object. </p>
+            <p>We use @classmethod decorator in python to create a class method </p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Facade Methods</h3>
+            <p>Facade Method is a Structural Design pattern that provides a simpler unified interface to a more complex system.</p>
+            <p>The word Facade means the face of a building or particularly an outer lying interface of a complex system, consists of several sub-systems. It is an essential part Gang of Four design patterns. It provides an easier way to access methods of the underlying systems by providing a single entry point.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Design Patterns</h3>
+            <p>Design Patterns is the most essential part of Software Engineering, as they provide the general repeatable solution to a commonly occurring problem in software design.</p>
+            <p>They usually represent some of the best practices adopted by experienced object-oriented software developers.</p>
+            <p>Classification of design patterns:<br>1.Creational Design Pattern<br>2.Structural Design Patterns<br>3.Behavioral Design Patterns</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Method</h3>
+            <p>A method in python is somewhat similar to a function, except it is associated with object/classes.</p>
+            <p> Methods in python are very similar to functions except for two major differences. The method is implicitly used for an object for which it is called. The method is accessible to data that is contained within the class.</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="crd">
+            <h3>Property</h3>
+            <p>The property() method in Python provides an interface to instance attributes.</p>
+            <p>It encapsulates instance attributes and provides a property, The property() method takes the get, set and delete methods as arguments and returns an object of the property class.</p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

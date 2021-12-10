@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="leftcolumn">
+        <p>
+            The four principles of object-oriented programming are <b>Encapsulation</b>, <b>Abstraction</b>, <b>Inheritance</b>, and <b>Polymorphism</b>.
+        </p>
+        <p>
+            <b>Encapsulation: </b> <br>
+            Say we have a program. It has a few logically different objects which communicate with each other — according to the rules defined in the program.<br>
+            Encapsulation is achieved when each object keeps its state private, inside a class. Other objects don’t have direct access to this state. Instead, they can only call a list of public functions — called methods.<br>
+            So, the object manages its own state via methods — and no other class can touch it unless explicitly allowed. If you want to communicate with the object, you should use the methods provided. But (by default), you can’t change the state.<br>
+        </p>
+        <p>
+            <b>Abstraction</b> <br>
+            Abstraction can be thought of as a natural extension of encapsulation.<br>
+            In object-oriented design, programs are often extremely large. And separate objects communicate with each other a lot. So maintaining a large codebase like this for years — with changes along the way — is difficult.<br>
+            Abstraction is a concept aiming to ease this problem.<br>
+            Applying abstraction means that each object should only expose a high-level mechanism for using it.<br>
+            This mechanism should hide internal implementation details. It should only reveal operations relevant for the other objects.<br>
+            Think — a coffee machine. It does a lot of stuff and makes quirky noises under the hood. But all you have to do is put in coffee and press a button.<br>
+            Preferably, this mechanism should be easy to use and should rarely change over time. Think of it as a small set of public methods which any other class can call without “knowing” how they work.<br>
+        </p>
+        <p>
+            <b>Inheritance</b><br>
+            OK, we saw how encapsulation and abstraction can help us develop and maintain a big codebase.<br>
+            But do you know what is another common problem in OOP design?<br>
+            Objects are often very similar. They share common logic. But they’re not entirely the same. Ugh…<br>
+            So how do we reuse the common logic and extract the unique logic into a separate class? One way to achieve this is inheritance.<br>
+            It means that you create a (child) class by deriving from another (parent) class. This way, we form a hierarchy.<br>
+            The child class reuses all fields and methods of the parent class (common part) and can implement its own (unique part).<br>
+
+        </p>
+        <p>
+            <b>Polymorphism</b><br>
+            We’re down to the most complex word! Polymorphism means “many shapes” in Greek.<br>
+            So we already know the power of inheritance and happily use it. But there comes this problem.<br>
+            Say we have a parent class and a few child classes which inherit from it. Sometimes we want to use a collection — for example a list — which contains a mix of all these classes. Or we have a method implemented for the parent class — but we’d like to use it for the children, too.<br>
+            This can be solved by using polymorphism.<br>
+            Simply put, polymorphism gives a way to use a class exactly like its parent so there’s no confusion with mixing types. But each child class keeps its own methods as they are.<br>
+            This typically happens by defining a (parent) interface to be reused. It outlines a bunch of common methods. Then, each child class implements its own version of these methods.<br>
+            Any time a collection (such as a list) or a method expects an instance of the parent (where common methods are outlined), the language takes care of evaluating the right implementation of the common method — regardless of which child is passed.<br>
+
+        </p>
+    </div>
+
+<div class="rightcolumn">
+    <img src="{{url_for('static', filename='images/oops.png')}}" alt="OOP Image">
+</div>
+{% endblock %}

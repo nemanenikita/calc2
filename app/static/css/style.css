@@ -17,6 +17,18 @@ footer a{
     /*font-size: 20px;*/
     text-align: center;
 }
+.crd{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 280px;
+}
+.column {
+    float: left;
+    width: 23%;
+    padding: 10px 10px;
+}
 .topnav {
     list-style-type: none;
     margin: 0;
@@ -51,13 +63,13 @@ a:hover{
 }
 .center {
     display: block;
-    margin-left: 0px;
+    margin-left: auto;
     margin-right: auto;
-    width: 30%;
-    height: 30%;
+    width: 65%;
+    height: 65%;
 }
 .hero-image{
-    background-image: url("/app/static/images/background.png");
+    background-image: url("/Images/background.png");
     height: 50%;
     width: 100%;
     background-position: center;
@@ -65,16 +77,17 @@ a:hover{
     background-size: cover;
     position: absolute;
 }
-.leftcolumn {
-    float: left;
+.row .leftcolumn{
     width: 50%;
-
+    float: left;
 }
+
 .leftcolumn card{
     height: 50%;
 }
-.rightcolumn {
-    float: left;
+
+.row .rightcolumn {
+    float: right;
     width: 50%;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -123,4 +136,26 @@ input[type=submit] {
 }
 .closebtn:hover {
   color: black;!important;
+}
+a.nav-link{
+    display:block;
+    /*padding:10px 24px;*/
+    /*padding-bottom: 60px;*/
+    padding: 8px;
+    margin:0.1em 0.1em 0.1em 0.1em;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Tahoma (sans-serif)', serif;
+    font-size:  20px;
+    font-weight:300;
+    color:#FFFFFF;
+    /*text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);*/
+    text-align:center;
+
+    /*transition: all 0.2s;*/
+}
+a.button4:hover{
+    border-color: rgba(255,255,255,1);
 }

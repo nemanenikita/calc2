@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="leftcolumn">
+    <h3>AAA Testing</h3>
+    <p>•	A test is a procedure that exercises a behavior to determine if the behavior functions correctly. There are several different kinds of tests, like unit tests, integration tests, or end-to-end tests, but all functional tests do the same basic thing: they try something and report PASS or FAIL.</p>
+    <p>•	Testing provides an empirical feedback loop for development. That’s how testing keeps us safe. With tests, we know when things break. Without tests, coding can be dangerous. We don’t want to deploy big ol’ bugs!</p>
+    <p>•	So, if we intend to spend time writing tests, how can we write good tests? There’s a simple but powerful pattern I like to follow: Arrange-Act-Assert.</p>
+    <h3>Arrange-Act-Assert is a great way to structure test cases. It prescribes an order of operations:</h3>
+    <p>1.	Arrange inputs and targets. Arrange steps should set up the test case. Does the test require any objects or special settings? Does it need to prep a database? Does it need to log into a web app? Handle all of these operations at the start of the test.</p>
+    <p>2.	Act on the target behavior. Act steps should cover the main thing to be tested. This could be calling a function or method, calling a REST API, or interacting with a web page. Keep actions focused on the target behavior.</p>
+    <p>3.	Assert expected outcomes. Act steps should elicit some sort of response. Assert steps verify the goodness or badness of that response. Sometimes, assertions are as simple as checking numeric or string values. Other times, they may require checking multiple facets of a system. Assertions will ultimately determine if the test passes or fails.</p>
+    <p>Every major programming language has at least one test framework. Frameworks like JUnit, NUnit, Cucumber, and (my favorite) pytest enable you, as the programmer, to automate tests, execute suites, and report results. However, the framework itself doesn’t make a test case “good” or “bad.” You, as the tester, must know how to write good tests!</p>
+    <p>Arrange-Act-Assert is powerful because it is simple. It forces tests to focus on independent, individual behaviors. It separates setup actions from the main actions. It requires test to make verifications and not merely run through motions. Notice how the pattern is not Arrange-Act-Assert-Act-Assert – subsequent actions and assertions belong in separate tests! Arrange-Act-Assert is a great pattern to follow for writing good functional tests.</p>
+    <p>Unit Testing<br>
+        Here’s a basic unit test for Python’s absolute value function:<br>
+        1 def test_abs_for_a_negative_number():<br>
+        2<br>
+        3 # Arrange<br>
+        4 negative = -5<br>
+        5<br>
+        6 # Act<br>
+        7 answer = abs(negative)<br>
+        8<br>
+        9 # Assert<br>
+        10	assert answer == 5<br>
+        This test may seem trivial, but we can use it to illustrate our pattern. I like to write comments denoting each phase of the test case as well.<br>
+        1.	The Arrange step creates a variable named “negative” for testing.<br>
+        2.	The Act step calls the “abs” function using the “negative” variable and stores the returned value in a variable named “answer.”<br>
+        3.	The Assert step verifies that “answer” is a positive value.<br>
+    </p>
+</div>
+<div class="rightcolumn">
+    <img src="{{url_for('static', filename='images/AAA.png')}}" alt="AAA Image">
+    <img id="aaa" src="{{url_for('static', filename='images/AAAcode.png')}}" alt="AAACode Image" >
+
+</div>
+{% endblock %}

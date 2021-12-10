@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="leftcolumn">
+    <h3>Separation of Concerns in Software Design</h3>
+    <p>The separation of concerns (SoC) is one of the most fundamental principles in software development.<br>
+        It is so crucial that 2 out of 5 SOLID principles (Single Responsibility and Interface Segregation) are direct
+        derivations from this concept.<br>
+        The principle is simple: don’t write your program as one solid block, instead, break up the code into chunks
+        that are finalized tiny pieces of the system each able to complete a simple distinct job.<br>
+        In this article, I elaborate on applying this profound principle at all levels of abstraction: from the
+        programming code inside each function and the design of the modules to the overall app’s architecture, all for
+        achieving the characteristics of what we call a qualitative software.</p>
+    <h3>SoC for programming functions</h3>
+    <p>If we take the lowest level (the actual programming code), SoC instructs us to avoid writing long complex
+        functions. When the function starts to bloat up in size, this is the red flag that the method is possibly taking
+        care of too many things at once.<br>
+        In such a case SoC pushes us to refactor it, turning into a more laconic and descriptive revision. During this
+        process, parts of the original algorithm get exported and encapsulated in separate smaller functions with a
+        private access level. We gain the code clarity, and chunks of the algorithm eventually become reusable by other
+        parts, even if we initially didn’t expect this to happen.</p>
+    <h3>SoC for modules</h3>
+    <p>At a bit higher level, this principle tells us to group the functions under self-contained modules, each
+        responsible for the fulfillment of a single set of tasks that have a clear logical correlation.<br>
+        The process very much resembles what we had to do for functions: estrange less-closely related functionality and
+        group up the features serving the same distinct purpose.</p>
+    <h3>In Calculator Program, SoC is used for evey operation. For every operation like Addition, Subtraction, Multiplication and Division a separate Python file is written and it is called in a single function.
+    Also, in testing also test cases for all the operations are written in different python files. And the history functions are written in their files and called whenever needed.</h3>
+</div>
+<div class="rightcolumn">
+    <img src="{{url_for('static', filename='images/soc.PNG')}}" alt="soc Image" >
+    <img src="{{url_for('static', filename='images/soc_example.PNG')}}" alt="soc example Image">
+</div>
+{% endblock %}

@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}"/>
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <h3 style="color: #3b5998">Encapsulation</h3>
+            <img src="Images/encapsulation.png" alt="Encapsulation Image" style="width: 300px; height: 250px">
+            <p style="color: #3b5998">Encapsulation is one of the fundamental concepts in object-oriented programming
+                (OOP). It describes the
+                idea of wrapping data and the methods that work on data within one unit. This puts restrictions on
+                accessing variables and methods directly and can prevent the accidental modification of data. To prevent
+                accidental change, an object’s variable can only be changed by an object’s method. Those types of
+                variables are known as private variable.
+                A class is an example of encapsulation as it encapsulates all the data that is member functions,
+                variables, etc.
+            </p>
+            <p style="color: #d55d11">
+                In Calculator program, in all the Python files the methods are Encapsulated under the class.
+                For example:- In calculation.py, class Calculation encapsulates method,__init__(),
+                convert_args_to_list_float(), create(), get_result().
+                To access any of these methods we will have to call class Calculation and then can access the method.
+            </p>
+            <p style="color: #3b5998">Consider a real-life example of encapsulation, in a company, there are different
+                sections like the
+                accounts section, finance section, sales section etc. The finance section handles all the financial
+                transactions and keeps records of all the data related to finance. Similarly, the sales section handles
+                all the sales-related activities and keeps records of all the sales. Now there may arise a situation
+                when for some reason an official from the finance section needs all the data about sales in a particular
+                month. In this case, he is not allowed to directly access the data of the sales section. He will first
+                have to contact some other officer in the sales section and then request him to give the particular
+                data. This is what encapsulation is. Here the data of the sales section and the employees that can
+                manipulate them are wrapped under a single name “sales section”. Using encapsulation also hides the
+                data. In this example, the data of the sections like sales, finance, or accounts are hidden from any
+                other section.</p>
+            <img src="Images/encap.PNG" alt="encap Image" style="width: 300px; height: 250px">
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h3 style="color: #3b5998">Abstraction</h3>
+            <img src="Images/abstraction.png" alt="Abstraction Image" style="width: 300px; height: 250px">
+            <p style="color: #3b5998">An abstract class can be considered as a blueprint for other classes. It allows
+                you to create a set of
+                methods that must be created within any child classes built from the abstract class. A class which
+                contains one or more abstract methods is called an abstract class. An abstract method is a method that
+                has a declaration but does not have an implementation. While we are designing large functional units we
+                use an abstract class. When we want to provide a common interface for different implementations of a
+                component, we use an abstract class.</p>
+            <p style="color: #d55d11">
+                In Calculation program, calculation.py file is using an abstract method. First we have imported the
+                Abstract Method and then
+                we have declared it on the method which we have to make abstract. In this code get_result() is an
+                abstract method. In the main method
+                it is just returning True value. But other files have called that methods to give it its functionality.
+                For Example: in addition.py get_result() is returning sum of the numbers.
+            </p>
+            <p style="color: #3b5998">
+                How Abstract Base classes work :
+                By default, Python does not provide abstract classes. Python comes with a module that provides the base
+                for defining Abstract Base classes(ABC) and that module name is ABC. ABC works by decorating methods of
+                the base class as abstract and then registering concrete classes as implementations of the abstract
+                base. A method becomes abstract when decorated with the keyword @abstractmethod.
+            </p>
+            <p style="color: #3b5998">
+                Abstract Class Instantiation :
+                Abstract classes are incomplete because they have methods that have nobody. If python allows creating an
+                object for abstract classes then using that object if anyone calls the abstract method, but there is no
+                actual implementation to invoke. So we use an abstract class as a template and according to the need, we
+                extend it and build on it before we can use it. Due to the fact, an abstract class is not a concrete
+                class, it cannot be instantiated. When we create an object for the abstract class it raises an error.
+            </p>
+            <img src="Images/abstr.png" alt="Abstr Image" style="width: 300px; height: 250px">
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h3 style="color: #3b5998">Inheritance</h3>
+            <img src="Images/inheritance.png" alt="Inheritance Image" style="width: 300px; height: 250px">
+            <p style="color: #3b5998">Inheritance is the capability of one class to derive or inherit the properties
+                from another class. The benefits of inheritance are:<br>
+                1. It represents real-world relationships well.<br>
+                2. It provides reusability of a code. We don’t have to write the same code again and again. Also, it
+                allows us to add more features to a class without modifying it.<br>
+                3. It is transitive in nature, which means that if class B inherits from another class A, then all the
+                subclasses of B would automatically inherit from class A.<br>
+            </p>
+            <p style="color:#d55d11;">
+                In Calculator program, in every operation file i.e., addition.py, subtraction.py, multiplication.py,
+                division.py the method get_result()
+                is defined with its operations performed in it. And in all the testing files i.e. addition_test.py,
+                subtraction_test.py, multiplication_test.py,
+                division_test.py, that get_result() method is inherited by importing that class in the test class and it
+                is performing the operations which are declared
+                in the normal operation files. So this is the example of Inheritance in the Calculator program.
+            </p>
+            <p style="color: #3b5998">Different forms of Inheritance:<br>
+                1. Single inheritance: When a child class inherits from only one parent class, it is called single
+                inheritance. We saw an example above.<br>
+                2. Multiple inheritance: When a child class inherits from multiple parent classes, it is called multiple
+                inheritance.
+                Unlike Java and like C++, Python supports multiple inheritance. We specify all parent classes as a
+                comma-separated list in the bracket.<br>
+                3. Multilevel inheritance: When we have a child and grandchild relationship.<br>
+                4. Hierarchical inheritance More than one derived classes are created from a single base.<br>
+                5. Hybrid inheritance: This form combines more than one form of inheritance. Basically, it is a blend of
+                more than one type of inheritance.<br>
+                <img src="Images/abstr.png" alt="abstr Image" style="width: 300px; height: 250px">
+                <img src="Images/inher.PNG" alt="inher Image" style="width: 300px; height: 250px">
+            </p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h3 style="color: #3b5998">Polymorphism</h3>
+            <img src="Images/polymorphism.png" alt="Polymorphism Image" style="width: 300px; height: 250px">
+            <p style="color: #3b5998">What is Polymorphism: The word polymorphism means having many forms. In programming, polymorphism means
+                the same function name (but different signatures) being used for different types.</p>
+            <p style="color: #d55d11">
+                In Calculator program, get_result() method is the best example of Polymorphism with Inheritance. Polymorphism means one method having
+                different functionality. In calculator program, get_result is an abstract method which returns nothing in the main file which is calculation.py.
+                But in addition.py it returns the sum of numbers. In subtraction.py it returns the subtraction of numbers. In multiplication.py it returns
+                the multiplication of numbers. In division.py it returns the division of numbers. This is how Polymorphism is used in Calculator program.
+            </p>
+            <p style="color: #3b5998">Polymorphism with Inheritance:
+                In Python, Polymorphism lets us define methods in the child class that have the same name as the methods
+                in the parent class. In inheritance, the child class inherits the methods from the parent class.
+                However, it is possible to modify a method in a child class that it has inherited from the parent class.
+                This is particularly useful in cases where the method inherited from the parent class doesn’t quite fit
+                the child class. In such cases, we re-implement the method in the child class. This process of
+                re-implementing a method in the child class is known as Method Overriding.
+            </p>
+            <img src="{{url_for('static', filename='images/abstr.png')}}" alt="abstr Image" style="width: 300px; height: 250px">
+            <img src="{{url_for('static', filename='images/inher.PNG')}}" alt="inher Image" style="width: 300px; height: 250px">
+            <img src="{{url_for('static', filename='images/poly.png')}}" alt="poly Image" style="width: 300px; height: 250px">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
