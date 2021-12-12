@@ -1,8 +1,9 @@
 """A simple flask web app"""
-from flask import Flask
+from flask import Flask, request
 from app.controllers.index_controller import IndexController,Page4Controller, Page5Controller
 from app.controllers.index_controller import Page1Controller, Page2Controller,Page3Controller
 from app.controllers.calculator_controller import CalculatorController
+from app.controllers.result_controller import ResultController
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
@@ -10,6 +11,11 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 @app.route("/", methods=['GET'])
 def index_get():
     return IndexController.get()
+
+@app.route("/Results Table", methods=['GET'])
+def result_get():
+    """result page routing to controller"""
+    return ResultController.get()
 
 @app.route("/calculator", methods=['GET'])
 def calculator_get():

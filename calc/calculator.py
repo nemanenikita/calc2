@@ -37,3 +37,15 @@ class Calculator:
         """ adds list of numbers"""
         Calculations.add_calculation_to_history(Division.create(values))
         return True
+    @staticmethod
+    def getHistory():
+        """ Get history """
+        return Calculations.history
+    @staticmethod
+    def getHistoryFromCSV():
+        """ Get history """
+        return Calculations.readHistoryFromCSV()
+    @staticmethod
+    def writeHistoryToCSV():
+        """ Get history """
+        return Calculations.writeHistoryToCSV()

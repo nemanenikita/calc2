@@ -1,0 +1,4 @@
+value1,value2,result,operation
+1,1,1.0,multiplication
+2,0,ZeroDivisionError,division
+12,2,24.0,multiplication
