@@ -7,3 +7,4 @@ value1,value2,result,operation
 66,55,11.0,subtraction
 70,7,10.0,division
 3,3,9.0,multiplication
+12,12,144.0,multiplication
