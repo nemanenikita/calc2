@@ -4,6 +4,8 @@ from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
 from tests.csvwrite import csvwriter
+
+#pylint: disable=invalid-name
 class Calculations:
     """Calculation history Class"""
     history = []

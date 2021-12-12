@@ -2,3 +2,7 @@ value1,value2,result,operation
 1,1,1.0,multiplication
 2,0,ZeroDivisionError,division
 12,2,24.0,multiplication
+4,4,8.0,addition
+2,2,4.0,multiplication
+66,55,11.0,subtraction
+70,7,10.0,division
