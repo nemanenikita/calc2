@@ -8,3 +8,7 @@ value1,value2,result,operation
 70,7,10.0,division
 3,3,9.0,multiplication
 12,12,144.0,multiplication
+23,20,3.0,subtraction
+20,0,ZeroDivisionError,division
+12,12,24.0,addition
+12,2,6.0,division
